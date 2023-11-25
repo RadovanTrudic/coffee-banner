@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* base styles */
+* {
+  margin: 0;
+  font-family: 'Quicksand';
+}
+
+
+/*NAVBAR*/
+.navbar {
+  background-color: #203688;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar h1 {
+  color: white;
+  font-size: xx-large;
+}
+.navbar h3 {
+  color: white;
+}
+.navbar img {
+  font-size: xx-large;
+}
