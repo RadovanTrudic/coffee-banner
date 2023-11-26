@@ -7,21 +7,249 @@
 }
 
 
-/*NAVBAR*/
-.navbar {
-  background-color: #203688;
+/*HEADER*/
+.header {
+  background-color: #444444;
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.navbar h1 {
+.header h1 {
   color: white;
   font-size: xx-large;
 }
-.navbar h3 {
+.header h3 {
   color: white;
 }
-.navbar img {
-  font-size: xx-large;
+.header img {
+  max-width: 200px;
+}
+
+/*DESCRIPTION*/
+.description {
+  color: rgb(77, 77, 77);
+  padding: 50px;
+}
+
+/*GENERATOR*/
+.generator {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container {
+  max-width: 1000px;
+  display: flex;
+}
+
+.item {
+  display: flex;
+  width: 100%;
+}
+
+/*SWIPER*/
+.swiper {
+  max-width: 1000px;
+  height: 300px;
+}
+
+/*PREVIEW*/
+.preview {
+  max-width: 1000px;
+  margin: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+.preview h2 {
+  color: rgb(77, 77, 77);
+  padding: 20px;
+}
+
+/*CARD*/
+.card {
+  margin: 20px;
+  border: 5px solid rgb(77, 77, 77);; /* Add border with color */
+  border-radius: 8px; /* Optional: Add border radius for rounded corners */
+}
+.card h2 {
+  color: white;
+  background-color: rgb(77, 77, 77);
+}
+
+.card .container {
+  display: flex;
+  gap: 20px;
+}
+
+.card .item {
+  flex: 1;
+  padding: 20px;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  background-color: #444444;
+  border-radius: 5px;
+}
+
+.card p {
+  overflow-wrap: break-word; /* This allows long words to break and wrap to the next line */
+}
+
+.card .ingredients {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.card .ingredient {
+  background-color: rgb(172, 226, 253);
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/*SELECT COFFEE*/
+.selectCoffee {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selectCoffee h3 {
+  padding: 20px;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.temperature-options {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.temperature-options label {
+  margin-right: 10px;
+}
+
+.coffee-type-select label {
+  width: 100%;
+}
+
+.coffee-type-select select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.selectCoffee button {
+  margin: 20px;
+  background-color: #1fa1db;
+  color: white;
+  width: 200px;
+  border: transparent;
+  border-radius: 5px;
+  font-size: large;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/*CHOOSE WIDTH*/
+.choose-width {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.choose-width h3 {
+  padding: 20px;
+}
+
+.choose-width button {
+  margin: 20px;
+  background-color: #1fa1db;
+  color: white;
+  width: 200px;
+  border: transparent;
+  border-radius: 5px;
+  font-size: large;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.width-options {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.width-options label {
+  margin-right: 10px;
+}
+
+.comment-input input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+/*CUSTOMIZE TITLE*/
+.customize-title {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.customize-title h3 {
+  padding: 20px;
+}
+
+.customize-title button {
+  margin: 20px;
+  background-color: #1fa1db;
+  color: white;
+  width: 200px;
+  border: transparent;
+  border-radius: 5px;
+  font-size: large;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.customize-title-options-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.customize-title-input input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 5px;
 }

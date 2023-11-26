@@ -1,10 +1,19 @@
-import './App.css'
+import Context from './context/context'
 import Home from './pages/home'
 
 function App() {
+  
+  const initialValue = {
+    coffeeType: "",
+    width: 300,
+    title: "",
+    description: ""
+}
 
   return (
-    <Home></Home>
+    <Context.Provider value={initialValue}>
+      <Home></Home>
+    </Context.Provider>
   )
 }
 
