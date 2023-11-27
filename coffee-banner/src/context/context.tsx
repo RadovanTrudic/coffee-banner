@@ -10,7 +10,7 @@ const initialState = {
       'https://www.foodandwine.com/thmb/CCe2JUHfjCQ44L0YTbCu97ukUzA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Partners-Latte-FT-BLOG0523-09569880de524fe487831d95184495cc.jpg',
     ingredients: {},
   },
-  width: 300,
+  width: 700,
 };
 
 export const BannerContext = createContext<any>({});
