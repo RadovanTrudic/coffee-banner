@@ -1,10 +1,15 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { BannerContext } from '../context/context';
 
 const CustomizeTitle = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const { banner, setBanner } = useContext(BannerContext);
+
+  useEffect(() => {
+    setTitle(banner.coffee.title);
+    setDescription(banner.coffee.description);
+  }, [banner.coffee.description, banner.coffee.title]);
 
   const handleTitleChange = (event: any) => {
     setTitle(event.target.value);
