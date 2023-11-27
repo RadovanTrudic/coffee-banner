@@ -65,7 +65,11 @@ const ChooseWidth = () => {
         )}
       </div>
 
-      {selectedWidth && <button onClick={handleUpdateWidth}>Update width</button>}
+      {selectedWidth && banner.coffee.id !== 0 ? (
+        <button onClick={handleUpdateWidth}>Update width</button>
+      ) : (
+        <div className="button-restriction">Please select width and complete the previous step to proceed...</div>
+      )}
     </div>
   );
 };

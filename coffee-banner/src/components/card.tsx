@@ -11,9 +11,7 @@ const Card = () => {
         <div className="item">
           <p>{banner.coffee.description}</p>
         </div>
-        <div className="item">
-          <img src={banner.coffee.image} alt="Logo"></img>
-        </div>
+        <div className="item">{banner.coffee.image && <img src={banner.coffee.image} alt="Logo"></img>}</div>
       </div>
       <div className="ingredients">
         {Array.isArray(banner.coffee.ingredients) &&

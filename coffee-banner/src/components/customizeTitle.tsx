@@ -34,23 +34,22 @@ const CustomizeTitle = () => {
         <div className="customize-title-input">
           <label>
             Title:
-            <input type="text" value={title} onChange={handleTitleChange} placeholder="Enter your comment" />
+            <input type="text" value={title} onChange={handleTitleChange} placeholder="Enter your text" />
           </label>
         </div>
         <div className="customize-title-input">
           <label>
             Description:
-            <input
-              type="text"
-              value={description}
-              onChange={handleDescriptionChange}
-              placeholder="Enter your comment"
-            />
+            <input type="text" value={description} onChange={handleDescriptionChange} placeholder="Enter your text" />
           </label>
         </div>
       </div>
 
-      <button onClick={handleUpdateTitleAndDescription}>View and copy code</button>
+      {banner.width !== 700.5 && banner.coffee.id !== 0 ? (
+        <button onClick={handleUpdateTitleAndDescription}>View and copy code</button>
+      ) : (
+        <div className="button-restriction">Please complete previous steps to proceed...</div>
+      )}
     </div>
   );
 };
