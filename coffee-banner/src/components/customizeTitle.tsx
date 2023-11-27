@@ -46,7 +46,7 @@ const CustomizeTitle = () => {
       </div>
 
       {banner.width !== 700.5 && banner.coffee.id !== 0 ? (
-        <button onClick={handleUpdateTitleAndDescription}>View and copy code</button>
+        <button onClick={handleUpdateTitleAndDescription}>Update and view code</button>
       ) : (
         <div className="button-restriction">Please complete previous steps to proceed...</div>
       )}
