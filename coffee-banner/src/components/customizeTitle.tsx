@@ -23,7 +23,7 @@ const CustomizeTitle = () => {
     const updatedCoffee = { ...banner.coffee };
     updatedCoffee.description = description;
     updatedCoffee.title = title;
-    setBanner((prev: any) => ({ ...prev, coffee: updatedCoffee }));
+    setBanner((prev: any) => ({ ...prev, coffee: updatedCoffee, completed: true }));
   };
 
   return (

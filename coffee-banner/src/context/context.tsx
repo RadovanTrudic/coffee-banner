@@ -10,6 +10,7 @@ const initialState = {
     ingredients: {},
   },
   width: 700.5,
+  completed: false,
 };
 
 export const BannerContext = createContext<any>({});
