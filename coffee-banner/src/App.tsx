@@ -1,20 +1,12 @@
-import Context from './context/context'
-import Home from './pages/home'
+import { BannerProvider } from './context/context';
+import Home from './pages/home';
 
 function App() {
-  
-  const initialValue = {
-    coffeeType: "",
-    width: 300,
-    title: "",
-    description: ""
-}
-
   return (
-    <Context.Provider value={initialValue}>
+    <BannerProvider>
       <Home></Home>
-    </Context.Provider>
-  )
+    </BannerProvider>
+  );
 }
 
-export default App
+export default App;

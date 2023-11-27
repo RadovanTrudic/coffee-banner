@@ -15,19 +15,25 @@ import CustomizeTitle from './customizeTitle';
 export default () => {
   return (
     <Swiper
-    className='swiper'
+      className="swiper"
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={50}
       slidesPerView={1}
       navigation
       pagination={{ clickable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
+      onSwiper={swiper => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
     >
-      <SwiperSlide><SelectCoffee></SelectCoffee></SwiperSlide>
-      <SwiperSlide><ChooseWidth></ChooseWidth></SwiperSlide>
-      <SwiperSlide><CustomizeTitle></CustomizeTitle></SwiperSlide>
+      <SwiperSlide>
+        <SelectCoffee></SelectCoffee>
+      </SwiperSlide>
+      <SwiperSlide>
+        <ChooseWidth></ChooseWidth>
+      </SwiperSlide>
+      <SwiperSlide>
+        <CustomizeTitle></CustomizeTitle>
+      </SwiperSlide>
     </Swiper>
   );
 };

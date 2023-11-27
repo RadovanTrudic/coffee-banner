@@ -1,7 +1,7 @@
 export type Coffee = {
-    title: string;
-    description: string;
-    ingredients: string;
-    image: string;
-    id: number;
-  };
+  title: string;
+  description: string;
+  ingredients: Array<string>;
+  image: string;
+  id: number;
+};

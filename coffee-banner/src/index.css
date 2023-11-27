@@ -6,6 +6,11 @@
   font-family: 'Quicksand';
 }
 
+.home-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /*HEADER*/
 .header {
@@ -52,18 +57,24 @@
 
 /*SWIPER*/
 .swiper {
-  max-width: 1000px;
+  width: 75%;
   height: 300px;
 }
 
 /*PREVIEW*/
 .preview {
-  max-width: 1000px;
+  width: 75%;
   margin: 20px;
   background-color: white;
   border-radius: 5px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.preview .preview-card {
+  flex: 1;
 }
 .preview h2 {
   color: rgb(77, 77, 77);
@@ -73,7 +84,7 @@
 /*CARD*/
 .card {
   margin: 20px;
-  border: 5px solid rgb(77, 77, 77);; /* Add border with color */
+  border: 5px solid rgb(77, 77, 77); /* Add border with color */
   border-radius: 8px; /* Optional: Add border radius for rounded corners */
 }
 .card h2 {

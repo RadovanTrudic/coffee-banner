@@ -12,16 +12,14 @@ export default function useGetData(coffeType: string): GetDataReturnType {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const url = `https://api.sampleapis.com/coffee/hot${coffeType}`;
+    const url = `https://api.sampleapis.com/coffee/${coffeType}`;
 
     axios
       .get(url)
       .then((res: any) => {
         console.log(res.data);
         const data = res.data as Array<Coffee>;
-        //const cryptoData = new CryptoDTO(crypto, data.last_price, data.bid, data.ask, data.high, data.low);
-        //setData(cryptoData);
-        setData(data)
+        setData(data);
         setLoading(false);
         setError(null);
         console.log('GetData successed!');

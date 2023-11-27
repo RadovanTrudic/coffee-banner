@@ -1,15 +1,30 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import useGetData from '../hooks/useGetData';
+import { Coffee } from '../types/Coffee';
+import { BannerContext } from './../context/context';
 
 const SelectCoffee = () => {
   const [selectedTemperature, setSelectedTemperature] = useState('');
+  const [selectedCoffeeArray, setSelectedCoffeeArray] = useState<Array<Coffee>>();
   const [selectedCoffeeType, setSelectedCoffeeType] = useState('');
+  const [selectedCoffee, setSelectedCoffee] = useState<Coffee>();
+  const { data: hotCoffee } = useGetData('hot');
+  const { data: iceCoffee } = useGetData('iced');
+  const { banner, setBanner } = useContext(BannerContext);
 
-  const handleTemperatureChange = (event:any) => {
+  const handleTemperatureChange = (event: any) => {
     setSelectedTemperature(event.target.value);
+    const coffeeArray = event.target.value === 'hot' ? hotCoffee : iceCoffee;
+    setSelectedCoffeeArray(coffeeArray!);
   };
 
-  const handleCoffeeTypeChange = (event:any) => {
+  const handleCoffeeTypeChange = (event: any) => {
     setSelectedCoffeeType(event.target.value);
+    setSelectedCoffee(selectedCoffeeArray![event.target.value]);
+  };
+
+  const handleUpdateCoffee = () => {
+    setBanner({ ...banner, coffee: selectedCoffee });
   };
 
   return (
@@ -39,19 +54,20 @@ const SelectCoffee = () => {
           </label>
         </div>
 
-        <div className="coffee-type-select">
-          <label>
+        {selectedCoffeeArray && (
+          <div className="coffee-type-select">
             <select value={selectedCoffeeType} onChange={handleCoffeeTypeChange}>
-              <option value="">Select...</option>
-              <option value="cappuccino">Cappuccino</option>
-              <option value="latte">Latte</option>
-              {/* Add more coffee types as needed */}
+              {selectedCoffeeArray?.map((coffee, index) => (
+                <option key={coffee.id} value={index}>
+                  {coffee.title}
+                </option>
+              ))}
             </select>
-          </label>
-        </div>
+          </div>
+        )}
       </div>
 
-      <button>Update coffee type</button>
+      <button onClick={handleUpdateCoffee}>Update coffee type</button>
     </div>
   );
 };
