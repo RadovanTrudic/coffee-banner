@@ -67,7 +67,7 @@ const SelectCoffee = () => {
         )}
       </div>
 
-      <button onClick={handleUpdateCoffee}>Update coffee type</button>
+      {selectedCoffeeType && <button onClick={handleUpdateCoffee}>Update coffee type</button>}
     </div>
   );
 };

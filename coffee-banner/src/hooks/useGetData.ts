@@ -2,9 +2,6 @@ import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { Coffee } from '../types/Coffee';
 import { GetDataReturnType } from '../types/GetDataReturnType';
-//import CryptoDTO from '../dto/CryptoDTO';
-//import { GetDataReturnType } from '../types/returnTypes/GetDataReturnType';
-//import { CryptoData } from '../types/CryptoData';
 
 export default function useGetData(coffeType: string): GetDataReturnType {
   const [data, setData] = useState<Array<Coffee> | null>(null);

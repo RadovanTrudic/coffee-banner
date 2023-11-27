@@ -1,4 +1,4 @@
-import { Coffee } from "./Coffee";
+import { Coffee } from './Coffee';
 
 export type GetDataReturnType = {
   data: Array<Coffee> | null;

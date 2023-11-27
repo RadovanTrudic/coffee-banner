@@ -1,4 +1,4 @@
-import logo from './../assets/thinkit_logo.png'
+import logo from './../assets/thinkit_logo.png';
 
 const Header = () => {
   return (

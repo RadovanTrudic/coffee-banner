@@ -65,7 +65,7 @@ const ChooseWidth = () => {
         )}
       </div>
 
-      <button onClick={handleUpdateWidth}>Update width</button>
+      {selectedWidth && <button onClick={handleUpdateWidth}>Update width</button>}
     </div>
   );
 };
